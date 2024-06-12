@@ -16,7 +16,7 @@ app.get('/test-db-connection', async (req, res) => {
     }
   });
   
-  router.get('/Usuarios', async function(req, res, next) {
+  app.get('/Usuarios', async function(req, res, next) {
     try {
       const [rows] = await connection.query("SELECT * FROM Usuarios");
       if (rows.length === 0) {
