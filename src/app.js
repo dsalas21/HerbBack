@@ -18,7 +18,7 @@ app.get('/test-db-connection', async (req, res) => {
   
   app.get('/Usuarios', async function(req, res, next) {
     try {
-      const [rows] = await connection.query("SELECT * FROM Usuarios");
+      const [rows] = await pool.query("SELECT * FROM Usuarios");
       if (rows.length === 0) {
         return res.status(204).json({ status: 204, message: "No items found" });
       }
