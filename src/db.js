@@ -4,7 +4,8 @@ import {
     DB_NAME,
     DB_PASSWORD,
     DB_PORT,
-    DB_USER
+    DB_USER,
+    PORT
 } from './config.js'
 
 export const pool =  createPool({
